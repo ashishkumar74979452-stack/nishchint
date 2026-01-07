@@ -20,7 +20,7 @@ body.dark{
  --card:#1e293b;
  --text:#f1f5f9;
 }
-*{margin:0;padding:0;box-sizing:border-box;}
+*{margin:0;padding:0;box-sizing:border-box}
 body{
  font-family:'Hind',sans-serif;
  background:var(--bg);
@@ -34,23 +34,41 @@ header{
  color:#fff;
  padding:14px 30px;
  display:flex;
- align-items:center;
  justify-content:space-between;
-}
-.logo{
- display:flex;
  align-items:center;
- gap:10px;
 }
-.logo img{width:42px;}
-nav a{color:#fff;margin-left:18px;text-decoration:none;}
+.logo{display:flex;align-items:center;gap:10px}
+.logo img{width:42px}
+nav a{color:#fff;margin-left:18px;text-decoration:none}
 .toggle{cursor:pointer;font-size:20px}
+
+/* NOTICE BAR */
+.notice-bar{
+ background:#fffbeb;
+ color:#92400e;
+ padding:8px 14px;
+ font-weight:600;
+ display:flex;
+ gap:10px;
+ align-items:center;
+}
+.notice-badge{
+ background:#dc2626;
+ color:#fff;
+ padding:4px 10px;
+ border-radius:6px;
+ font-size:12px;
+ animation:blink 1s infinite;
+}
+@keyframes blink{50%{opacity:.4}}
 
 /* HERO */
 .hero{
  background:linear-gradient(135deg,#1e90ff,#38ada9);
- padding:60px 20px;
  color:#fff;
+ padding:70px 20px;
+ position:relative;
+ overflow:hidden;
 }
 .hero-grid{
  max-width:1200px;
@@ -61,20 +79,48 @@ nav a{color:#fff;margin-left:18px;text-decoration:none;}
  align-items:center;
 }
 
-/* CENTER */
-.hero-center{
- text-align:center;
+/* FLOATING ICONS */
+.float{
+ position:absolute;
+ font-size:40px;
+ opacity:.2;
+ animation:float 6s infinite ease-in-out;
 }
-.hero-center h1{
- font-family:'Poppins';
- font-size:32px;
+.f1{top:15%;left:8%}
+.f2{top:20%;right:10%;animation-delay:2s}
+.f3{bottom:12%;left:45%;animation-delay:4s}
+@keyframes float{
+ 0%,100%{transform:translateY(0)}
+ 50%{transform:translateY(-20px)}
 }
-.hero-center p{
- margin:12px 0;
- font-size:18px;
+
+/* HERO BOX */
+.hero-box{
+ background:rgba(255,255,255,.22);
+ padding:22px;
+ border-radius:18px;
+ backdrop-filter:blur(6px);
 }
-.hero-center ul{list-style:none;margin:12px 0;}
-.hero-center li{margin:4px 0;}
+.hero-box ul{list-style:none}
+.hero-box li{
+ margin:6px 0;
+ font-weight:600;
+}
+.glow{
+ animation:glow 1.5s infinite;
+}
+@keyframes glow{
+ 0%{text-shadow:0 0 5px #22d3ee}
+ 50%{text-shadow:0 0 15px #38bdf8}
+ 100%{text-shadow:0 0 5px #22d3ee}
+}
+
+/* HERO CENTER */
+.hero-center{text-align:center}
+.hero-center h1{font-family:'Poppins';font-size:32px}
+.hero-center p{margin:10px 0;font-size:18px}
+.hero-center ul{list-style:none;margin:10px 0}
+.hero-center li{margin:4px 0}
 .hero-center a{
  background:#25d366;
  padding:14px 30px;
@@ -85,25 +131,6 @@ nav a{color:#fff;margin-left:18px;text-decoration:none;}
  display:inline-block;
 }
 
-/* SERVICE BOX */
-.hero-box{
- background:rgba(255,255,255,0.22);
- padding:22px;
- border-radius:18px;
- backdrop-filter:blur(6px);
-}
-.hero-box h3{
- font-family:'Poppins';
- font-size:18px;
- margin-bottom:10px;
-}
-.hero-box ul{list-style:none;}
-.hero-box li{
- margin:6px 0;
- font-size:15px;
- font-weight:500;
-}
-
 /* COUNTERS */
 .counters{
  display:flex;
@@ -112,11 +139,39 @@ nav a{color:#fff;margin-left:18px;text-decoration:none;}
  margin-top:35px;
 }
 .counter{
- background:rgba(255,255,255,0.2);
+ background:rgba(255,255,255,.2);
  padding:14px 22px;
  border-radius:14px;
+ text-align:center;
 }
-.counter h3{font-family:'Poppins';}
+
+/* POPULAR SERVICES */
+.popular{
+ padding:60px 20px;
+ text-align:center;
+}
+.pop-grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+ gap:25px;
+ margin-top:30px;
+}
+.pop{
+ background:var(--card);
+ padding:30px 20px;
+ border-radius:20px;
+ transition:.3s;
+ position:relative;
+}
+.pop i{
+ font-size:50px;
+ color:var(--primary);
+ margin-bottom:10px;
+}
+.pop:hover{
+ transform:translateY(-10px);
+ box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
 
 /* SERVICES */
 .services{
@@ -133,11 +188,6 @@ nav a{color:#fff;margin-left:18px;text-decoration:none;}
  background:var(--card);
  padding:26px;
  border-radius:18px;
-}
-.service i{
- font-size:38px;
- color:var(--primary);
- margin-bottom:10px;
 }
 
 /* PROCESS */
@@ -164,6 +214,12 @@ nav a{color:#fff;margin-left:18px;text-decoration:none;}
  border-radius:50%;
 }
 
+/* TRUST */
+.trust{
+ padding:50px 20px;
+ text-align:center;
+}
+
 /* FOOTER */
 footer{
  background:#0a3d62;
@@ -188,9 +244,8 @@ footer{
 
 /* MOBILE */
 @media(max-width:900px){
- .hero-grid{
-  grid-template-columns:1fr;
- }
+ .hero-grid{grid-template-columns:1fr}
+ .counters{flex-direction:column}
 }
 </style>
 </head>
@@ -209,27 +264,35 @@ footer{
  </nav>
 </header>
 
+<div class="notice-bar">
+ <span class="notice-badge">NEW</span>
+ <marquee>
+  सभी सरकारी सेवाएं WhatsApp के माध्यम से उपलब्ध हैं |
+  छात्रवृत्ति • पेंशन • राशन • प्रमाण पत्र |
+  Nishchint – भरोसेमंद डिजिटल सेवा
+ </marquee>
+</div>
+
 <section class="hero">
+
+ <i class="fa-solid fa-graduation-cap float f1"></i>
+ <i class="fa-solid fa-person-cane float f2"></i>
+ <i class="fa-solid fa-file-lines float f3"></i>
+
  <div class="hero-grid">
 
-  <!-- LEFT -->
   <div class="hero-box">
-   <h3>📋 हमारी सेवाएं</h3>
    <ul>
-    <li>➡️ पैन कार्ड</li>
-    <li>➡️ राशन कार्ड</li>
-    <li>➡️ विवाह रजिस्ट्रेशन</li>
-    <li>➡️ हैसियत प्रमाण पत्र</li>
-    <li>➡️ जन्म प्रमाण पत्र</li>
-    <li>➡️ वोटर कार्ड</li>
-    <li>➡️ खतोनी प्रमाणित</li>
+    <li class="glow">➡️ छात्रवृत्ति सेवाएं</li>
+    <li class="glow">➡️ पैन / आधार</li>
+    <li class="glow">➡️ जन्म प्रमाण पत्र</li>
+    <li class="glow">➡️ वोटर कार्ड</li>
    </ul>
   </div>
 
-  <!-- CENTER -->
   <div class="hero-center">
    <h1>Nishchint – Online Form Filling Help</h1>
-   <p>सरकारी, बैंक और शिक्षा से जुड़े सभी फॉर्म<br>सही और सुरक्षित तरीके से भरवाएं</p>
+   <p>सरकारी, बैंक और शिक्षा से जुड़े सभी फॉर्म</p>
    <ul>
     <li>✔ 100% भरोसेमंद सेवा</li>
     <li>✔ WhatsApp सपोर्ट</li>
@@ -238,37 +301,41 @@ footer{
    <a href="https://wa.me/91XXXXXXXXXX">WhatsApp पर संपर्क करें</a>
   </div>
 
-  <!-- RIGHT -->
   <div class="hero-box">
-   <h3>📋 हमारी सेवाएं</h3>
    <ul>
-    <li>➡️ पारिवारिक लाभ</li>
-    <li>➡️ वृद्धा पेंशन</li>
-    <li>➡️ ड्राइविंग लाइसेंस</li>
-    <li>➡️ शस्त्र लाइसेंस</li>
-    <li>➡️ मृत्यु प्रमाण पत्र</li>
-    <li>➡️ पासपोर्ट आवेदन</li>
-    <li>➡️ दाखिल खारिज</li>
+    <li class="glow">➡️ पेंशन योजना</li>
+    <li class="glow">➡️ सरकारी योजनाएं</li>
+    <li class="glow">➡️ बैंक / लोन</li>
+    <li class="glow">➡️ दाखिल खारिज</li>
    </ul>
   </div>
 
  </div>
 
  <div class="counters">
-  <div class="counter"><h3 class="count" data-target="500">0</h3><p>खुश ग्राहक</p></div>
-  <div class="counter"><h3 class="count" data-target="1200">0</h3><p>फॉर्म पूरे</p></div>
-  <div class="counter"><h3 class="count" data-target="5">0</h3><p>रेटिंग</p></div>
+  <div class="counter"><h3>500+</h3><p>खुश ग्राहक</p></div>
+  <div class="counter"><h3>1200+</h3><p>फॉर्म पूरे</p></div>
+  <div class="counter"><h3>5★</h3><p>रेटिंग</p></div>
+ </div>
+</section>
+
+<section class="popular">
+ <h2>लोकप्रिय सेवाएं</h2>
+ <div class="pop-grid">
+  <div class="pop"><i class="fa-solid fa-graduation-cap"></i><h3>Student</h3><p>Scholarship & Admission</p></div>
+  <div class="pop"><i class="fa-solid fa-person-cane"></i><h3>Pension</h3><p>Old Age & Widow</p></div>
+  <div class="pop"><i class="fa-solid fa-landmark"></i><h3>Govt Scheme</h3><p>Yojana Apply</p></div>
+  <div class="pop"><i class="fa-solid fa-file-circle-check"></i><h3>Certificates</h3><p>Birth / Income</p></div>
  </div>
 </section>
 
 <section id="services" class="services">
-<h2>हमारी प्रमुख सेवाएं</h2>
+<h2>हमारी सभी सेवाएं</h2>
 <div class="service-grid">
- <div class="service"><i class="fa-solid fa-id-card"></i><h3>आधार / पैन</h3></div>
- <div class="service"><i class="fa-solid fa-building-columns"></i><h3>बैंक / ई-डिस्ट्रिक्ट उत्तर प्रदेश</h3></div>
- <div class="service"><i class="fa-solid fa-graduation-cap"></i><h3>छात्रवृत्ति/ सरकारी परीक्षा फॉर्म </h3></div>
- <div class="service"><i class="fa-solid fa-file-lines"></i><h3>सरकारी योजना</h3></div>
- <div class="service"><i class="fa-solid fa-id-card"></i><h3>विवाह रजिस्ट्रेशन</h3></div>
+ <div class="service">आधार / पैन</div>
+ <div class="service">राशन कार्ड</div>
+ <div class="service">छात्रवृत्ति</div>
+ <div class="service">पेंशन</div>
 </div>
 </section>
 
@@ -282,13 +349,20 @@ footer{
 </div>
 </section>
 
+<section class="trust">
+<h2>क्यों चुनें Nishchint?</h2>
+<p>🔒 सुरक्षित डेटा</p>
+<p>📄 प्रमाणित कार्य</p>
+<p>💯 भरोसेमंद सेवा</p>
+<p>📍 लोकल सपोर्ट</p>
+</section>
+
 <footer>
  <div>
   <h3>Nishchint</h3>
   <p>Online Form Filling & Digital Services</p>
  </div>
  <div>
-  <h4>संपर्क</h4>
   <p>📞 +91 7497945260</p>
   <p>📍 Uttar Pradesh</p>
  </div>
@@ -302,22 +376,7 @@ footer{
 function toggleDark(){
  document.body.classList.toggle('dark');
 }
-const counters=document.querySelectorAll('.count');
-counters.forEach(c=>{
- let update=()=>{
-  let t=+c.dataset.target;
-  let n=+c.innerText;
-  let i=t/100;
-  if(n<t){
-   c.innerText=Math.ceil(n+i);
-   setTimeout(update,20);
-  }
- };
- update();
-});
 </script>
 
 </body>
 </html>
-
-
