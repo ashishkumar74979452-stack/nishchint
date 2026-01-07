@@ -26,16 +26,19 @@ p {
   max-width: 900px;
   margin: auto;
 }
-
 .service-box div {
   font-weight: bold;
 }
-
 @media (max-width: 600px) {
   .header {
-    flex-direction: column;
-    text-align: center;
-  }
+  background: #ffffff;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+  position: sticky;
+  top: 0;
 
   .header nav {
     margin-top: 10px;
@@ -45,4 +48,5 @@ p {
     padding: 60px 15px;
   }
 }
+
 
