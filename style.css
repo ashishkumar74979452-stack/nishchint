@@ -1,3 +1,18 @@
+.logo-box{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo-box img{
+  height:42px;
+  width:auto;
+}
+
+.logo-box span{
+  font-size:22px;
+  font-weight:700;
+}
 *{
   margin:0;
   padding:0;
@@ -160,3 +175,4 @@ footer{
     font-size:30px;
   }
 }
+
