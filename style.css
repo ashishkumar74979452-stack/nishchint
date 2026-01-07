@@ -2,7 +2,7 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:'Segoe UI', sans-serif;
+  font-family:'Hind', sans-serif;
 }
 
 body{
@@ -11,164 +11,143 @@ body{
 }
 
 /* HEADER */
-.header{
+header{
+  background:#0a3d62;
+  color:#fff;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:16px 40px;
-  position:sticky;
-  top:0;
-  z-index:100;
-  background:linear-gradient(
-    135deg,
-    rgba(10,40,120,0.9),
-    rgba(0,160,255,0.85)
-  );
-  backdrop-filter:blur(14px);
-  box-shadow:0 12px 30px rgba(0,0,0,0.3);
+  padding:15px 30px;
 }
 
-.logo-box{
+.logo{
   display:flex;
   align-items:center;
-  gap:12px;
+  gap:10px;
+  font-size:20px;
+  font-weight:600;
 }
 
-.logo-box img{
-  height:44px;
-}
-
-.logo-box span{
-  font-size:22px;
-  font-weight:800;
-  color:#fff;
+.logo img{
+  width:40px;
 }
 
 nav a{
   color:#fff;
-  margin-left:22px;
+  margin-left:20px;
   text-decoration:none;
   font-weight:500;
 }
 
 /* HERO */
 .hero{
-  min-height:90vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  padding:40px 20px;
-  background:
-    radial-gradient(circle at top left, rgba(255,255,255,0.12), transparent 40%),
-    linear-gradient(135deg,#0b2cff,#00e5ff);
+  background:linear-gradient(135deg,#1e90ff,#38ada9);
   color:#fff;
-  position:relative;
-  overflow:hidden;
-}
-
-.hero::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:url("https://www.transparenttextures.com/patterns/cubes.png");
-  opacity:0.15;
+  text-align:center;
+  padding:70px 20px;
 }
 
 .hero h1{
-  font-size:54px;
-  font-weight:900;
-  letter-spacing:-1px;
-  z-index:2;
+  font-family:'Poppins';
+  font-size:32px;
 }
 
 .hero p{
-  font-size:19px;
-  opacity:0.95;
-  max-width:720px;
-  margin-top:12px;
-  z-index:2;
+  margin:15px 0;
+  font-size:18px;
 }
 
-/* BUTTON */
+.hero-points{
+  list-style:none;
+  margin:20px 0;
+}
+
+.hero-points li{
+  margin:5px 0;
+}
+
 .btn{
-  margin-top:32px;
-  background:linear-gradient(135deg,#25d366,#1ebc57);
-  color:#003b1f;
-  padding:16px 40px;
-  border-radius:50px;
-  font-weight:700;
+  display:inline-block;
+  background:#25d366;
+  color:#fff;
+  padding:14px 25px;
+  border-radius:30px;
   text-decoration:none;
-  box-shadow:0 18px 45px rgba(0,0,0,0.35);
-  transition:all 0.3s ease;
-  z-index:2;
-}
-
-.btn:hover{
-  transform:translateY(-4px) scale(1.05);
-  box-shadow:0 25px 60px rgba(0,0,0,0.45);
+  font-weight:600;
 }
 
 /* SERVICES */
 .services{
-  padding:70px 40px;
+  padding:50px 20px;
   text-align:center;
 }
 
 .services h2{
-  font-size:34px;
-  margin-bottom:40px;
+  font-family:'Poppins';
+  margin-bottom:30px;
 }
 
-.cards{
+.service-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:32px;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
 }
 
 .card{
-  background:rgba(255,255,255,0.9);
-  padding:36px 26px;
-  border-radius:20px;
-  box-shadow:
-    0 22px 60px rgba(0,0,0,0.14),
-    inset 0 1px 0 rgba(255,255,255,0.6);
-  backdrop-filter:blur(12px);
-  font-size:17px;
-  font-weight:600;
-  transition:all 0.3s ease;
-}
-
-.card:hover{
-  transform:translateY(-12px);
-  box-shadow:0 35px 80px rgba(0,0,0,0.22);
-}
-
-/* ABOUT & CONTACT */
-.about, .contact{
-  padding:70px 40px;
-  text-align:center;
   background:#fff;
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
-.about h2, .contact h2{
-  font-size:32px;
-  margin-bottom:25px;
+.card i{
+  font-size:40px;
+  color:#1e90ff;
+  margin-bottom:15px;
 }
 
-.about p{
-  max-width:800px;
-  margin:auto;
-  line-height:1.8;
-  font-size:16.5px;
+/* WHY */
+.why{
+  background:#fff;
+  padding:50px 20px;
+  text-align:center;
+}
+
+.why-box p{
+  margin:8px 0;
+  font-weight:500;
+}
+
+/* ABOUT */
+.about{
+  padding:50px 20px;
+  background:#eef4ff;
+  text-align:center;
+}
+
+/* CONTACT */
+.contact{
+  padding:40px 20px;
+  text-align:center;
 }
 
 /* FOOTER */
 footer{
-  background:#0a1f44;
+  background:#0a3d62;
   color:#fff;
   text-align:center;
-  padding:16px;
-  font-size:14px;
+  padding:15px;
+}
+
+/* WhatsApp Floating */
+.whatsapp-float{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25d366;
+  color:#fff;
+  font-size:28px;
+  padding:15px;
+  border-radius:50%;
+  text-decoration:none;
 }
