@@ -11,14 +11,18 @@ body {
 
 /* HEADER */
 .header {
-  background: #ffffff;
+  background: #0b5ed7;
+  color: white;
   padding: 15px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  position: sticky;
-  top: 0;
+}
+
+.header nav a {
+  color: white;
+}
+
 }
 
 .header nav a {
@@ -107,4 +111,5 @@ footer {
 .card:hover {
   transform: scale(1.05);
 }
+
 
