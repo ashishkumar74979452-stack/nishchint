@@ -41,11 +41,11 @@ body {
 }
 
 .hero h1 {
-  font-size: 32px;
+  font-size: 40px;
 }
 
 .hero p {
-  font-size: 16px;
+  font-size: 18px;
   margin-top: 10px;
 }
 
@@ -111,5 +111,6 @@ footer {
 .card:hover {
   transform: scale(1.05);
 }
+
 
 
