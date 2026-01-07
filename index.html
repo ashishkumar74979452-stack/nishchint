@@ -3,23 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nishchint – Online Form Filling Help</title>
-<!-- SEO META TAGS -->
-<meta name="description" content="Nishchint एक भरोसेमंद ऑनलाइन फॉर्म भरने की सेवा है। आधार, पैन, राशन, पेंशन, छात्रवृत्ति, सरकारी योजनाओं के सभी फॉर्म WhatsApp के माध्यम से भरवाएं।">
-<meta name="keywords" content="online form filling service, nishchint online form, aadhaar pan form filling, ration card online help, pension form filling, scholarship form filling, government form filling service">
-<meta name="author" content="Nishchint">
-<img src="logo.png" alt="Nishchint Online Form Filling Service Logo">
-<p>📍 Online Form Filling Service in Uttar Pradesh</p>
 
-<!-- Open Graph (WhatsApp / Facebook Preview) -->
+<title>Nishchint – Online Form Filling Help</title>
+
+<!-- SEO -->
+<meta name="description" content="Nishchint एक भरोसेमंद ऑनलाइन फॉर्म भरने की सेवा है। आधार, पैन, राशन, पेंशन, छात्रवृत्ति और सरकारी योजनाओं के फॉर्म WhatsApp से भरवाएं।">
+<meta name="keywords" content="online form filling service, nishchint online form, aadhaar pan form filling, ration card online help, pension form filling">
+<meta name="author" content="Nishchint">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
 <meta property="og:title" content="Nishchint – Online Form Filling Help">
-<meta property="og:description" content="सरकारी, बैंक और शिक्षा से जुड़े सभी फॉर्म – WhatsApp के माध्यम से भरवाएं।">
+<meta property="og:description" content="सरकारी, बैंक और शिक्षा से जुड़े सभी फॉर्म WhatsApp के माध्यम से भरवाएं।">
 <meta property="og:type" content="website">
 <meta property="og:image" content="logo.png">
 
-<!-- Mobile SEO -->
-<meta name="robots" content="index, follow">
-
+<!-- Fonts & Icons -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Hind:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -43,21 +42,56 @@ body{
  transition:.3s;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 header{
  background:#0a3d62;
  color:#fff;
- padding:14px 30px;
+ padding:10px 24px;
  display:flex;
  justify-content:space-between;
  align-items:center;
 }
-.logo{display:flex;align-items:center;gap:10px}
-.logo img{width:42px}
-nav a{color:#fff;margin-left:18px;text-decoration:none}
-.toggle{cursor:pointer;font-size:20px}
 
-/* NOTICE BAR */
+.logo{
+ display:flex;
+ align-items:center;
+ gap:10px;
+}
+
+.logo img{
+ height:38px;
+ width:auto;
+ object-fit:contain;
+}
+
+.logo-text{
+ display:flex;
+ flex-direction:column;
+ line-height:1.1;
+}
+
+.logo-text h2{
+ font-size:20px;
+ margin:0;
+}
+
+.logo-text span{
+ font-size:12px;
+ color:#c7e6ff;
+}
+
+nav a{
+ color:#fff;
+ margin-left:18px;
+ text-decoration:none;
+}
+
+.toggle{
+ cursor:pointer;
+ font-size:18px;
+}
+
+/* ================= NOTICE BAR ================= */
 .notice-bar{
  background:#fffbeb;
  color:#92400e;
@@ -67,6 +101,7 @@ nav a{color:#fff;margin-left:18px;text-decoration:none}
  gap:10px;
  align-items:center;
 }
+
 .notice-badge{
  background:#dc2626;
  color:#fff;
@@ -77,7 +112,7 @@ nav a{color:#fff;margin-left:18px;text-decoration:none}
 }
 @keyframes blink{50%{opacity:.4}}
 
-/* HERO */
+/* ================= HERO ================= */
 .hero{
  background:linear-gradient(135deg,#1e90ff,#38ada9);
  color:#fff;
@@ -85,6 +120,7 @@ nav a{color:#fff;margin-left:18px;text-decoration:none}
  position:relative;
  overflow:hidden;
 }
+
 .hero-grid{
  max-width:1200px;
  margin:auto;
@@ -94,7 +130,7 @@ nav a{color:#fff;margin-left:18px;text-decoration:none}
  align-items:center;
 }
 
-/* FLOATING ICONS */
+/* floating icons */
 .float{
  position:absolute;
  font-size:40px;
@@ -109,7 +145,7 @@ nav a{color:#fff;margin-left:18px;text-decoration:none}
  50%{transform:translateY(-20px)}
 }
 
-/* HERO BOX */
+/* hero boxes */
 .hero-box{
  background:rgba(255,255,255,.22);
  padding:22px;
@@ -121,6 +157,8 @@ nav a{color:#fff;margin-left:18px;text-decoration:none}
  margin:6px 0;
  font-weight:600;
 }
+
+/* glowing arrows */
 .glow{
  animation:glow 1.5s infinite;
 }
@@ -130,7 +168,7 @@ nav a{color:#fff;margin-left:18px;text-decoration:none}
  100%{text-shadow:0 0 5px #22d3ee}
 }
 
-/* HERO CENTER */
+/* hero center */
 .hero-center{text-align:center}
 .hero-center h1{font-family:'Poppins';font-size:32px}
 .hero-center p{margin:10px 0;font-size:18px}
@@ -146,7 +184,7 @@ nav a{color:#fff;margin-left:18px;text-decoration:none}
  display:inline-block;
 }
 
-/* COUNTERS */
+/* counters */
 .counters{
  display:flex;
  justify-content:center;
@@ -160,7 +198,7 @@ nav a{color:#fff;margin-left:18px;text-decoration:none}
  text-align:center;
 }
 
-/* POPULAR SERVICES */
+/* ================= POPULAR ================= */
 .popular{
  padding:60px 20px;
  text-align:center;
@@ -176,7 +214,6 @@ nav a{color:#fff;margin-left:18px;text-decoration:none}
  padding:30px 20px;
  border-radius:20px;
  transition:.3s;
- position:relative;
 }
 .pop i{
  font-size:50px;
@@ -188,7 +225,7 @@ nav a{color:#fff;margin-left:18px;text-decoration:none}
  box-shadow:0 10px 30px rgba(0,0,0,.15);
 }
 
-/* SERVICES */
+/* ================= SERVICES ================= */
 .services{
  padding:60px 20px;
  text-align:center;
@@ -205,7 +242,7 @@ nav a{color:#fff;margin-left:18px;text-decoration:none}
  border-radius:18px;
 }
 
-/* PROCESS */
+/* ================= PROCESS ================= */
 .process{
  background:var(--card);
  padding:60px 20px;
@@ -229,13 +266,13 @@ nav a{color:#fff;margin-left:18px;text-decoration:none}
  border-radius:50%;
 }
 
-/* TRUST */
+/* ================= TRUST ================= */
 .trust{
  padding:50px 20px;
  text-align:center;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 footer{
  background:#0a3d62;
  color:#fff;
@@ -245,7 +282,7 @@ footer{
  gap:20px;
 }
 
-/* WHATSAPP */
+/* whatsapp */
 .whatsapp{
  position:fixed;
  bottom:20px;
@@ -257,10 +294,24 @@ footer{
  font-size:28px;
 }
 
-/* MOBILE */
-@media(max-width:900px){
- .hero-grid{grid-template-columns:1fr}
- .counters{flex-direction:column}
+/* ================= MOBILE ================= */
+@media(max-width:768px){
+ header{
+  flex-direction:column;
+  align-items:flex-start;
+  gap:8px;
+ }
+ nav{
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+ }
+ .hero-grid{
+  grid-template-columns:1fr;
+ }
+ .counters{
+  flex-direction:column;
+ }
 }
 </style>
 </head>
@@ -269,8 +320,11 @@ footer{
 
 <header>
  <div class="logo">
-  <img src="logo.png">
-  <h2>Nishchint</h2>
+  <img src="logo.png" alt="Nishchint Online Form Filling">
+  <div class="logo-text">
+   <h2>Nishchint</h2>
+   <span>ऑनलाइन फॉर्म भरने की भरोसेमंद सेवा</span>
+  </div>
  </div>
  <nav>
   <a href="#services">सेवाएं</a>
@@ -281,11 +335,7 @@ footer{
 
 <div class="notice-bar">
  <span class="notice-badge">NEW</span>
- <marquee>
-  सभी सरकारी सेवाएं WhatsApp के माध्यम से उपलब्ध हैं |
-  छात्रवृत्ति • पेंशन • राशन • प्रमाण पत्र |
-  Nishchint – भरोसेमंद डिजिटल सेवा
- </marquee>
+ <marquee>सभी सरकारी सेवाएं WhatsApp के माध्यम से उपलब्ध हैं | Nishchint – भरोसेमंद डिजिटल सेवा</marquee>
 </div>
 
 <section class="hero">
@@ -298,7 +348,7 @@ footer{
 
   <div class="hero-box">
    <ul>
-    <li class="glow">➡️ छात्रवृत्ति सेवाएं</li>
+    <li class="glow">➡️ छात्रवृत्ति</li>
     <li class="glow">➡️ पैन / आधार</li>
     <li class="glow">➡️ जन्म प्रमाण पत्र</li>
     <li class="glow">➡️ वोटर कार्ड</li>
@@ -318,7 +368,7 @@ footer{
 
   <div class="hero-box">
    <ul>
-    <li class="glow">➡️ पेंशन योजना</li>
+    <li class="glow">➡️ पेंशन</li>
     <li class="glow">➡️ सरकारी योजनाएं</li>
     <li class="glow">➡️ बैंक / लोन</li>
     <li class="glow">➡️ दाखिल खारिज</li>
@@ -332,14 +382,15 @@ footer{
   <div class="counter"><h3>1200+</h3><p>फॉर्म पूरे</p></div>
   <div class="counter"><h3>5★</h3><p>रेटिंग</p></div>
  </div>
+
 </section>
 
 <section class="popular">
  <h2>लोकप्रिय सेवाएं</h2>
  <div class="pop-grid">
-  <div class="pop"><i class="fa-solid fa-graduation-cap"></i><h3>Student</h3><p>Scholarship & Admission</p></div>
-  <div class="pop"><i class="fa-solid fa-person-cane"></i><h3>Pension</h3><p>Old Age & Widow</p></div>
-  <div class="pop"><i class="fa-solid fa-landmark"></i><h3>Govt Scheme</h3><p>Yojana Apply</p></div>
+  <div class="pop"><i class="fa-solid fa-graduation-cap"></i><h3>Student</h3><p>Scholarship</p></div>
+  <div class="pop"><i class="fa-solid fa-person-cane"></i><h3>Pension</h3><p>Old Age</p></div>
+  <div class="pop"><i class="fa-solid fa-landmark"></i><h3>Govt Scheme</h3><p>Yojana</p></div>
   <div class="pop"><i class="fa-solid fa-file-circle-check"></i><h3>Certificates</h3><p>Birth / Income</p></div>
  </div>
 </section>
@@ -369,7 +420,6 @@ footer{
 <p>🔒 सुरक्षित डेटा</p>
 <p>📄 प्रमाणित कार्य</p>
 <p>💯 भरोसेमंद सेवा</p>
-<p>📍 लोकल सपोर्ट</p>
 </section>
 
 <footer>
@@ -378,12 +428,12 @@ footer{
   <p>Online Form Filling & Digital Services</p>
  </div>
  <div>
-  <p>📞 +91 7497945260</p>
+  <p>📞 +91 XXXXXXXXXX</p>
   <p>📍 Uttar Pradesh</p>
  </div>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/917497945260">
+<a class="whatsapp" href="https://wa.me/91XXXXXXXXXX">
  <i class="fa-brands fa-whatsapp"></i>
 </a>
 
@@ -395,4 +445,3 @@ function toggleDark(){
 
 </body>
 </html>
-
