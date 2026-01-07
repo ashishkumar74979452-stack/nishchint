@@ -96,3 +96,15 @@ footer {
   padding: 15px;
   font-size: 14px;
 }
+.services h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+.card {
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
