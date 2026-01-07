@@ -10,15 +10,15 @@
 
 <style>
 :root{
- --bg:#f4f7fb;
- --text:#1f2937;
- --card:#ffffff;
  --primary:#1e90ff;
+ --bg:#f4f7fb;
+ --card:#ffffff;
+ --text:#1f2937;
 }
 body.dark{
  --bg:#0f172a;
- --text:#f1f5f9;
  --card:#1e293b;
+ --text:#f1f5f9;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 body{
@@ -32,80 +32,91 @@ body{
 header{
  background:#0a3d62;
  color:#fff;
- padding:15px 30px;
+ padding:14px 30px;
  display:flex;
- justify-content:space-between;
  align-items:center;
+ justify-content:space-between;
 }
-header h2{font-family:'Poppins';}
+.logo{
+ display:flex;
+ align-items:center;
+ gap:10px;
+}
+.logo img{width:42px;}
 nav a{color:#fff;margin-left:18px;text-decoration:none;}
 .toggle{cursor:pointer;font-size:20px}
 
 /* HERO */
 .hero{
  background:linear-gradient(135deg,#1e90ff,#38ada9);
+ padding:60px 20px;
  color:#fff;
- padding:70px 20px 50px;
+}
+.hero-grid{
+ max-width:1200px;
+ margin:auto;
+ display:grid;
+ grid-template-columns:1fr 1.3fr 1fr;
+ gap:20px;
+ align-items:center;
+}
+
+/* CENTER */
+.hero-center{
  text-align:center;
 }
-.hero h1{font-family:'Poppins';font-size:34px;}
-.hero p{margin:12px 0;font-size:18px;}
-.hero ul{list-style:none;margin:15px 0;}
-.hero ul li{margin:4px 0;}
-.hero .btn{
+.hero-center h1{
+ font-family:'Poppins';
+ font-size:32px;
+}
+.hero-center p{
+ margin:12px 0;
+ font-size:18px;
+}
+.hero-center ul{list-style:none;margin:12px 0;}
+.hero-center li{margin:4px 0;}
+.hero-center a{
  background:#25d366;
  padding:14px 30px;
  border-radius:30px;
  color:#fff;
- display:inline-block;
  text-decoration:none;
  font-weight:600;
+ display:inline-block;
 }
 
-/* HERO SERVICES BOX */
-.hero-services{
- max-width:440px;
- margin:35px auto 0;
+/* SERVICE BOX */
+.hero-box{
  background:rgba(255,255,255,0.22);
- padding:24px 28px;
+ padding:22px;
  border-radius:18px;
- text-align:left;
  backdrop-filter:blur(6px);
 }
-.hero-services h3{
+.hero-box h3{
  font-family:'Poppins';
- font-size:20px;
- margin-bottom:14px;
+ font-size:18px;
+ margin-bottom:10px;
 }
-.hero-services ul{list-style:none}
-.hero-services li{
- margin:7px 0;
- font-size:16px;
+.hero-box ul{list-style:none;}
+.hero-box li{
+ margin:6px 0;
+ font-size:15px;
  font-weight:500;
-}
-.hero-services .note{
- margin-top:12px;
- font-size:14px;
- opacity:.9;
 }
 
 /* COUNTERS */
 .counters{
  display:flex;
  justify-content:center;
- gap:30px;
+ gap:25px;
  margin-top:35px;
- flex-wrap:wrap;
 }
 .counter{
  background:rgba(255,255,255,0.2);
- padding:16px 26px;
+ padding:14px 22px;
  border-radius:14px;
 }
-.counter h3{
- font-family:'Poppins';
- font-size:26px;
-}
+.counter h3{font-family:'Poppins';}
 
 /* SERVICES */
 .services{
@@ -124,9 +135,9 @@ nav a{color:#fff;margin-left:18px;text-decoration:none;}
  border-radius:18px;
 }
 .service i{
- font-size:40px;
+ font-size:38px;
  color:var(--primary);
- margin-bottom:12px;
+ margin-bottom:10px;
 }
 
 /* PROCESS */
@@ -153,13 +164,6 @@ nav a{color:#fff;margin-left:18px;text-decoration:none;}
  border-radius:50%;
 }
 
-/* TRUST */
-.trust{
- padding:50px 20px;
- text-align:center;
-}
-.trust p{margin:8px 0;font-size:17px}
-
 /* FOOTER */
 footer{
  background:#0a3d62;
@@ -170,7 +174,7 @@ footer{
  gap:20px;
 }
 
-/* WHATSAPP FLOAT */
+/* WHATSAPP */
 .whatsapp{
  position:fixed;
  bottom:20px;
@@ -181,13 +185,23 @@ footer{
  border-radius:50%;
  font-size:28px;
 }
+
+/* MOBILE */
+@media(max-width:900px){
+ .hero-grid{
+  grid-template-columns:1fr;
+ }
+}
 </style>
 </head>
 
 <body>
 
 <header>
- <h2>Nishchint</h2>
+ <div class="logo">
+  <img src="logo.png">
+  <h2>Nishchint</h2>
+ </div>
  <nav>
   <a href="#services">सेवाएं</a>
   <a href="#process">प्रक्रिया</a>
@@ -196,29 +210,48 @@ footer{
 </header>
 
 <section class="hero">
- <h1>Nishchint – Online Form Filling Help</h1>
- <p>सरकारी, बैंक और शिक्षा से जुड़े सभी फॉर्म<br>सही और सुरक्षित तरीके से भरवाएं</p>
+ <div class="hero-grid">
 
- <ul>
-  <li>✔ 100% भरोसेमंद सेवा</li>
-  <li>✔ WhatsApp सपोर्ट</li>
-  <li>✔ किफायती शुल्क</li>
- </ul>
+  <!-- LEFT -->
+  <div class="hero-box">
+   <h3>📋 हमारी सेवाएं</h3>
+   <ul>
+    <li>➡️ पैन कार्ड</li>
+    <li>➡️ राशन कार्ड</li>
+    <li>➡️ विवाह रजिस्ट्रेशन</li>
+    <li>➡️ हैसियत प्रमाण पत्र</li>
+    <li>➡️ जन्म प्रमाण पत्र</li>
+    <li>➡️ वोटर कार्ड</li>
+    <li>➡️ खतोनी प्रमाणित</li>
+   </ul>
+  </div>
 
- <a class="btn" href="https://wa.me/91XXXXXXXXXX">WhatsApp पर संपर्क करें</a>
+  <!-- CENTER -->
+  <div class="hero-center">
+   <h1>Nishchint – Online Form Filling Help</h1>
+   <p>सरकारी, बैंक और शिक्षा से जुड़े सभी फॉर्म<br>सही और सुरक्षित तरीके से भरवाएं</p>
+   <ul>
+    <li>✔ 100% भरोसेमंद सेवा</li>
+    <li>✔ WhatsApp सपोर्ट</li>
+    <li>✔ किफायती शुल्क</li>
+   </ul>
+   <a href="https://wa.me/91XXXXXXXXXX">WhatsApp पर संपर्क करें</a>
+  </div>
 
- <div class="hero-services">
-  <h3>📲 WhatsApp पर उपलब्ध सेवाएं</h3>
-  <ul>
-   <li>➡️ आधार कार्ड / पैन कार्ड / वोटर आईडी</li>
-   <li>➡️ राशन कार्ड व फैमिली आईडी</li>
-   <li>➡️ छात्रवृत्ति व एडमिशन फॉर्म</li>
-   <li>➡️ बैंक, लोन व बीमा फॉर्म</li>
-   <li>➡️ सरकारी योजना आवेदन</li>
-   <li>➡️ जन्म / मृत्यु प्रमाण पत्र</li>
-   <li>➡️ पेंशन व सामाजिक लाभ</li>
-  </ul>
-  <p class="note">👉 सभी सेवाएं WhatsApp के माध्यम से उपलब्ध हैं</p>
+  <!-- RIGHT -->
+  <div class="hero-box">
+   <h3>📲 WhatsApp सेवाएं</h3>
+   <ul>
+    <li>➡️ पारिवारिक लाभ</li>
+    <li>➡️ वृद्धा पेंशन</li>
+    <li>➡️ ड्राइविंग लाइसेंस</li>
+    <li>➡️ शस्त्र लाइसेंस</li>
+    <li>➡️ मृत्यु प्रमाण पत्र</li>
+    <li>➡️ पासपोर्ट आवेदन</li>
+    <li>➡️ दाखिल खारिज</li>
+   </ul>
+  </div>
+
  </div>
 
  <div class="counters">
@@ -241,19 +274,11 @@ footer{
 <section id="process" class="process">
 <h2>प्रक्रिया कैसे काम करती है?</h2>
 <div class="process-grid">
- <div class="step"><span>1</span><p>WhatsApp पर संपर्क</p></div>
+ <div class="step"><span>1</span><p>WhatsApp संपर्क</p></div>
  <div class="step"><span>2</span><p>दस्तावेज़ भेजें</p></div>
  <div class="step"><span>3</span><p>फॉर्म भरना</p></div>
- <div class="step"><span>4</span><p>पुष्टि व रसीद</p></div>
+ <div class="step"><span>4</span><p>रसीद प्राप्त करें</p></div>
 </div>
-</section>
-
-<section class="trust">
-<h2>क्यों चुनें Nishchint?</h2>
-<p>🔒 सुरक्षित डेटा प्रक्रिया</p>
-<p>📄 सही व प्रमाणित कार्य</p>
-<p>💯 भरोसेमंद सेवा</p>
-<p>📍 लोकल सपोर्ट उपलब्ध</p>
 </section>
 
 <footer>
@@ -276,15 +301,14 @@ footer{
 function toggleDark(){
  document.body.classList.toggle('dark');
 }
-
 const counters=document.querySelectorAll('.count');
 counters.forEach(c=>{
  let update=()=>{
-  let target=+c.dataset.target;
-  let count=+c.innerText;
-  let inc=target/100;
-  if(count<target){
-   c.innerText=Math.ceil(count+inc);
+  let t=+c.dataset.target;
+  let n=+c.innerText;
+  let i=t/100;
+  if(n<t){
+   c.innerText=Math.ceil(n+i);
    setTimeout(update,20);
   }
  };
