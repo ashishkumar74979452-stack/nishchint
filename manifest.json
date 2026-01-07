@@ -1,0 +1,8 @@
+{
+  "name": "Nishchint",
+  "short_name": "Nishchint",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000"
+}
