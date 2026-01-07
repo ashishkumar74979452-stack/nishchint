@@ -30,6 +30,8 @@ header{
 
 .logo img{
   width:40px;
+  width;auto;
+  object-fit:contain;
 }
 
 nav a{
@@ -151,3 +153,4 @@ footer{
   border-radius:50%;
   text-decoration:none;
 }
+
