@@ -1,8 +1,106 @@
-{
-  "name": "Nishchint",
-  "short_name": "Nishchint",
-  "start_url": "./",
-  "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#000000"
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f7fa;
+  color: #333;
+}
+
+/* HEADER */
+.header {
+  background: #ffffff;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header nav a {
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #1e90ff, #0066cc);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero .btn {
+  background: #28a745;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+/* SERVICES */
+.services {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.service-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.service-box div {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* WHY */
+.why {
+  background: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.why ul {
+  list-style: none;
+  padding: 0;
+}
+
+.why li {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+/* ABOUT & CONTACT */
+.about, .contact {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* INSTALL */
+.install {
+  text-align: center;
+  margin: 30px;
+}
+
+#installBtn {
+  display: none;
+  background: #1e90ff;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+}
+
+/* FOOTER */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
 }
