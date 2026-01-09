@@ -177,68 +177,49 @@ font-size:26px
 
 <script>
 const services={
-student:[
-"छात्रवृत्ति (Pre/Post Matric)",
-"फीस प्रतिपूर्ति",
-"कॉलेज / यूनिवर्सिटी फॉर्म",
-"ITI / Polytechnic फॉर्म",
-"Online Exam Form"
-],
-cert:[
-"आय प्रमाण पत्र",
-"जाति प्रमाण पत्र",
-"निवास प्रमाण पत्र",
-"जन्म / मृत्यु प्रमाण पत्र",
-"चरित्र प्रमाण पत्र"
-],
-gov:[
-"आयुष्मान भारत कार्ड",
-"प्रधानमंत्री आवास योजना",
-"उज्ज्वला योजना",
-"ई-श्रम कार्ड",
-"शौचालय योजना"
-],
-id:[
-"PAN कार्ड",
-"Aadhaar Update",
-"वोटर ID",
-"राशन कार्ड",
-"Driving Licence"
-],
-job:[
-"SSC / Railway Form",
-"UP Police Form",
-"Govt Job Online Apply",
-"Bank Account Assistance"
-],
-digital:[
-"Resume / CV Making",
-"Online Form Filling",
-"Print / Scan",
-"Bill Payment",
-"PDF Correction"
-]
+  student:[
+    "छात्रवृत्ति (Pre/Post Matric)","फीस प्रतिपूर्ति","कॉलेज / यूनिवर्सिटी फॉर्म",
+    "ITI / Polytechnic फॉर्म","Online Exam Form"
+  ],
+  cert:[
+    "आय प्रमाण पत्र","जाति प्रमाण पत्र","निवास प्रमाण पत्र",
+    "जन्म / मृत्यु प्रमाण पत्र","चरित्र प्रमाण पत्र"
+  ],
+  gov:[
+    "आयुष्मान भारत कार्ड","प्रधानमंत्री आवास योजना","उज्ज्वला योजना",
+    "ई-श्रम कार्ड","शौचालय योजना"
+  ],
+  id:[
+    "PAN कार्ड","Aadhaar Update","वोटर ID","राशन कार्ड","Driving Licence"
+  ],
+  job:[
+    "SSC / Railway Form","UP Police Form","Govt Job Online Apply","Bank Assistance"
+  ],
+  digital:[
+    "Resume / CV Making","Online Form Filling","Print / Scan",
+    "Bill Payment","PDF Correction"
+  ]
 };
 
 function openModal(type){
-document.getElementById("modal").style.display="flex";
-document.getElementById("modalTitle").innerText=type.toUpperCase()+" SERVICES";
-const ul=document.getElementById("modalList");
-ul.innerHTML="";
-services[type].forEach(s=>{
-ul.innerHTML+=`<li>${s} <a class="apply" href="https://wa.me/917497945260">Apply</a></li>`;
-});
+  const modal=document.getElementById("modal");
+  const ul=document.getElementById("modalList");
+  document.getElementById("modalTitle").innerText="सेवाएं";
+  ul.innerHTML="";
+  services[type].forEach(s=>{
+    ul.innerHTML+=`<li>${s} <a class="apply" href="https://wa.me/917497945260">Apply</a></li>`;
+  });
+  modal.style.display="flex";
+  setTimeout(()=>modal.classList.add("show"),10);
 }
-function closeModal(){
-document.getElementById("modal").style.display="none";
-}
-</script>
 
-<script>
-if("serviceWorker" in navigator){
-navigator.serviceWorker.register("/nishchint/service-worker.js");
+function closeModal(){
+  const modal=document.getElementById("modal");
+  modal.classList.remove("show");
+  setTimeout(()=>modal.style.display="none",300);
 }
 </script>
 
 </body>
 </html>
+
