@@ -1,6 +1,6 @@
-/* ===============================
-   GLOBAL RESET & BASE
-================================ */
+/* =================================================
+   GLOBAL RESET
+================================================= */
 * {
   margin: 0;
   padding: 0;
@@ -14,17 +14,17 @@ body {
   line-height: 1.7;
 }
 
-/* ===============================
+/* =================================================
    NAVBAR
-================================ */
+================================================= */
 nav {
   background: linear-gradient(90deg, #0b3c5d, #145da0);
   padding: 14px 10px;
   text-align: center;
   position: sticky;
   top: 0;
-  z-index: 999;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  z-index: 9999;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
 }
 
 nav a {
@@ -39,19 +39,38 @@ nav a:hover {
   color: #7CFFB2;
 }
 
-/* ===============================
-   HERO / TOP SECTION
-================================ */
+/* =================================================
+   HERO / TOP SECTION WOW
+================================================= */
 .hero, .banner, .top-section {
+  position: relative;
+  overflow: hidden;
   background: linear-gradient(135deg, #0b3c5d, #1e88e5);
   color: #ffffff;
-  padding: 60px 20px;
+  padding: 70px 20px;
   text-align: center;
 }
 
+.hero::after, .banner::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.12), transparent 60%);
+  animation: heroGlow 10s linear infinite;
+}
+
+@keyframes heroGlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
 .hero h1, .banner h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
+  font-size: 38px;
+  margin-bottom: 12px;
+  animation: textPop 1.2s ease forwards;
 }
 
 .hero p {
@@ -59,33 +78,32 @@ nav a:hover {
   opacity: 0.95;
 }
 
-/* ===============================
-   SECTION CARD STYLE
-================================ */
+@keyframes textPop {
+  from { opacity: 0; transform: translateY(35px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* =================================================
+   SECTIONS / CARDS
+================================================= */
 section {
   max-width: 1100px;
-  margin: 35px auto;
+  margin: 40px auto;
   padding: 35px;
   background: #ffffff;
-  border-radius: 18px;
-  box-shadow: 0 12px 35px rgba(0,0,0,0.12);
-  animation: fadeUp 0.8s ease forwards;
+  border-radius: 20px;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.12);
+  animation: fadeUp 0.9s ease forwards;
 }
 
 @keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* ===============================
+/* =================================================
    HEADINGS
-================================ */
+================================================= */
 h1 {
   color: #0b3c5d;
   font-size: 32px;
@@ -98,9 +116,9 @@ h2 {
   font-size: 24px;
 }
 
-/* ===============================
+/* =================================================
    LIST STYLE
-================================ */
+================================================= */
 ul {
   padding-left: 20px;
 }
@@ -108,4 +126,149 @@ ul {
 ul li {
   margin: 10px 0;
   font-size: 16px;
+}
+
+ul li::marker {
+  color: #25D366;
+  font-size: 18px;
+}
+
+/* =================================================
+   SERVICE / FEATURE BOXES
+================================================= */
+.card, .service-box, .feature-box, .item {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 26px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  text-align: center;
+}
+
+.card:hover, .service-box:hover, .feature-box:hover, .item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 22px 50px rgba(0,0,0,0.25);
+}
+
+/* =================================================
+   BUTTONS + CTA WOW
+================================================= */
+button, .btn, a.whatsapp {
+  background: linear-gradient(90deg, #145da0, #1e88e5);
+  color: #ffffff;
+  padding: 13px 28px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+a.whatsapp {
+  background: linear-gradient(90deg, #25D366, #1ebe57);
+  margin-top: 15px;
+  display: inline-block;
+  box-shadow: 0 8px 22px rgba(37,211,102,0.55);
+}
+
+a.whatsapp::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.3);
+  transform: skewX(-20deg);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% { left: -120%; }
+  60% { left: 120%; }
+  100% { left: 120%; }
+}
+
+/* =================================================
+   FLOATING WHATSAPP (FUNNEL HEART)
+================================================= */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: #ffffff;
+  font-size: 26px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 14px 40px rgba(37,211,102,0.7);
+  z-index: 99999;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.6); }
+  70% { box-shadow: 0 0 0 20px rgba(37,211,102,0); }
+  100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+}
+
+/* =================================================
+   SCROLL REMINDER CTA
+================================================= */
+.scroll-cta {
+  position: fixed;
+  bottom: 95px;
+  right: 20px;
+  background: #0b3c5d;
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-size: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+  animation: bounce 2s infinite;
+  z-index: 9999;
+}
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* =================================================
+   FOOTER
+================================================= */
+footer {
+  background: #0b3c5d;
+  color: #ffffff;
+  text-align: center;
+  padding: 22px;
+  font-size: 14px;
+  margin-top: 50px;
+}
+
+/* =================================================
+   MOBILE RESPONSIVE
+================================================= */
+@media (max-width: 768px) {
+  h1 { font-size: 26px; }
+  .hero h1 { font-size: 28px; }
+
+  section {
+    margin: 20px 12px;
+    padding: 22px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 6px 8px;
+    font-size: 15px;
+  }
 }
