@@ -204,7 +204,21 @@ button, .btn, a.whatsapp {
 
 /* WhatsApp floating icon */
 .whatsapp-float, .whatsapp-icon {
-  box-shadow: 0 10px 30px rgba(37,211,102,0.6) !important;
+  box-shadow: 0 10px 30px rgba(37,211,102,0.6) !important;/* ===== POLISH ANIMATION ===== */
+.polish {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: polishFade 0.8s ease forwards;
 }
+
+@keyframes polishFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+}
+
 
 
