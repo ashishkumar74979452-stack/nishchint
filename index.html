@@ -3,70 +3,105 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nishchint – Digital Seva Portal</title>
 
-<title>Nishchint – Online Form Filling & Government Services</title>
-
-<meta name="description" content="Nishchint उत्तर प्रदेश की भरोसेमंद ऑनलाइन फॉर्म भरने की सेवा है। Scholarship, Vacancy, Pension, PAN, Aadhaar, Certificates और सरकारी योजनाओं की पूरी जानकारी व सहायता।">
-<meta name="keywords" content="online form filling service, scholarship last date, government vacancy, nishchint, pan aadhaar help">
+<meta name="description" content="Nishchint – Uttar Pradesh ki trusted cyber cafe & online form filling service. Sabhi sarkari aur digital kaam ek jagah.">
 <meta name="robots" content="index, follow">
+
+<link rel="manifest" href="/nishchint/manifest.json">
+<meta name="theme-color" content="#0a3d62">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Hind:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Hind',sans-serif;background:#f4f7fb;color:#1f2937;line-height:1.7}
+body{font-family:'Hind',sans-serif;background:#f4f7fb;color:#1f2937}
 
 /* HEADER */
-header{background:#0a3d62;color:#fff;padding:14px 24px;display:flex;justify-content:space-between;align-items:center}
-header img{height:38px}
-header nav a{color:#fff;margin-left:16px;text-decoration:none;font-weight:600}
+header{
+background:#0a3d62;color:#fff;
+padding:14px 22px;
+display:flex;justify-content:space-between;align-items:center
+}
+header img{height:36px}
+header a{color:#fff;text-decoration:none;font-weight:600}
 
 /* HERO */
-.hero{background:linear-gradient(135deg,#1e90ff,#38ada9);color:#fff;padding:70px 20px;text-align:center}
-.hero h1{font-family:'Poppins';font-size:34px}
-.hero a{background:#25d366;color:#fff;padding:14px 32px;border-radius:30px;text-decoration:none;font-weight:600;display:inline-block;margin-top:14px}
-.counters{display:flex;justify-content:center;gap:20px;margin-top:30px}
-.counter{background:rgba(255,255,255,.2);padding:16px 24px;border-radius:16px}
+.hero{
+background:linear-gradient(135deg,#1e90ff,#38ada9);
+color:#fff;text-align:center;
+padding:60px 20px
+}
+.hero h1{font-family:'Poppins';font-size:32px}
+.hero a{
+background:#25d366;color:#fff;
+padding:14px 30px;border-radius:30px;
+display:inline-block;margin-top:15px;
+text-decoration:none;font-weight:600
+}
 
-/* SECTIONS */
-section{max-width:1200px;margin:60px auto;padding:0 20px}
-h2{text-align:center;margin-bottom:25px}
+/* CARDS */
+section{max-width:1200px;margin:50px auto;padding:0 20px}
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:22px
+}
+.card{
+background:#fff;
+padding:30px 20px;
+border-radius:20px;
+text-align:center;
+cursor:pointer;
+box-shadow:0 10px 30px rgba(0,0,0,.12);
+transition:.3s
+}
+.card:hover{transform:translateY(-8px)}
+.card i{font-size:46px;color:#1e90ff;margin-bottom:10px}
+.card h3{margin-top:10px}
 
-/* ACCORDION */
-.acc-item{background:#fff;border-radius:18px;margin-bottom:18px;box-shadow:0 10px 30px rgba(0,0,0,.12);overflow:hidden}
-.acc-header{padding:18px 22px;cursor:pointer;font-weight:600;background:linear-gradient(90deg,#0a3d62,#1e90ff);color:#fff;display:flex;justify-content:space-between}
-.acc-header::after{content:"▼";transition:.3s}
-.acc-item.open .acc-header{background:linear-gradient(90deg,#16a34a,#22c55e)}
-.acc-item.open .acc-header::after{transform:rotate(180deg)}
-.acc-body{max-height:0;overflow:hidden;transition:max-height .4s ease}
-.acc-body ul{padding:20px 30px}
-.acc-body li{margin:10px 0}
-.wa-link{margin-left:10px;background:#25d366;color:#fff;padding:5px 10px;border-radius:20px;font-size:13px;text-decoration:none}
-
-/* UPDATES */
-.update-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
-.update-card{background:#fff;padding:22px;border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,.12)}
-.update-card h3{margin-bottom:10px;color:#0a3d62}
-.update-card li{margin:8px 0}
-
-/* STATUS */
-.status-box{background:#fff;padding:30px;border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,.12);text-align:center}
-.status-box input{padding:12px;width:80%;max-width:320px}
-.status-box button{padding:12px 26px;background:#1e90ff;color:#fff;border:none;border-radius:30px;font-weight:600}
-
-/* KNOWLEDGE */
-.knowledge{background:#fff;padding:30px;border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,.12)}
-.knowledge h3{margin-top:15px}
+/* MODAL */
+.modal{
+position:fixed;top:0;left:0;
+width:100%;height:100%;
+background:rgba(0,0,0,.6);
+display:none;align-items:center;justify-content:center;
+z-index:999
+}
+.modal-content{
+background:#fff;
+width:90%;max-width:520px;
+border-radius:20px;
+padding:25px;
+max-height:80vh;overflow:auto
+}
+.modal-content h2{text-align:center;margin-bottom:15px}
+.modal-content ul{padding-left:20px}
+.modal-content li{margin:10px 0}
+.close{
+text-align:right;font-size:18px;
+cursor:pointer;font-weight:600
+}
+.apply{
+margin-left:8px;
+background:#25d366;color:#fff;
+padding:4px 10px;border-radius:20px;
+text-decoration:none;font-size:13px
+}
 
 /* FOOTER */
-footer{background:#0a3d62;color:#fff;padding:30px;text-align:center}
+footer{
+background:#0a3d62;color:#fff;
+text-align:center;padding:25px;margin-top:50px
+}
 
 /* WHATSAPP */
-.whatsapp{position:fixed;bottom:20px;right:20px;background:#25d366;color:#fff;padding:16px;border-radius:50%;font-size:28px}
-
-@media(max-width:768px){
-.counters{flex-direction:column}
+.whatsapp{
+position:fixed;bottom:20px;right:20px;
+background:#25d366;color:#fff;
+padding:16px;border-radius:50%;
+font-size:26px
 }
 </style>
 </head>
@@ -74,177 +109,66 @@ footer{background:#0a3d62;color:#fff;padding:30px;text-align:center}
 <body>
 
 <header>
-  <div style="display:flex;align-items:center;gap:10px">
-    <img src="logo.png" alt="Nishchint Logo">
-    <strong>Nishchint</strong>
-  </div>
-  <nav>
-    <a href="#services">Services</a>
-    <a href="#updates">Updates</a>
-    <a href="#status">Status</a>
-  </nav>
+<div style="display:flex;align-items:center;gap:10px">
+<img src="/nishchint/logo.png">
+<strong>Nishchint</strong>
+</div>
+<a href="https://wa.me/917497945260">WhatsApp</a>
 </header>
 
 <section class="hero">
-<h1>Nishchint – Online Form Filling & Govt Help</h1>
-<p>Scholarship, Vacancy, Pension, Certificates & More</p>
-<a href="https://wa.me/917497945260">WhatsApp पर संपर्क करें</a>
-
-<div class="counters">
-  <div class="counter">500+ ग्राहक</div>
-  <div class="counter">1200+ फॉर्म</div>
-  <div class="counter">5★ रेटिंग</div>
-</div>
-</section>
-
-<section id="services">
-<!-- EDUCATION -->
-<div class="acc-item">
-<div class="acc-header">🎓 शिक्षा / छात्र सेवाएं</div>
-<div class="acc-body">
-<ul>
-<li>छात्रवृत्ति (Pre / Post Matric) <a class="wa-link" href="https://wa.me/917497945260">Apply</a></li>
-<li>फीस प्रतिपूर्ति <a class="wa-link" href="https://wa.me/917497945260">Apply</a></li>
-<li>कॉलेज / यूनिवर्सिटी एडमिशन फॉर्म <a class="wa-link" href="https://wa.me/917497945260">Apply</a></li>
-<li>स्कूल TC / CC फॉर्म <a class="wa-link" href="https://wa.me/917497945260">Apply</a></li>
-<li>ITI / Polytechnic फॉर्म <a class="wa-link" href="https://wa.me/917497945260">Apply</a></li>
-<li>Online Exam Form (Board / Competitive) <a class="wa-link" href="https://wa.me/917497945260">Apply</a></li>
-</ul>
-</div>
-</div>
-
-<!-- CERTIFICATES -->
-<div class="acc-item">
-<div class="acc-header">📄 प्रमाण पत्र सेवाएं</div>
-<div class="acc-body">
-<ul>
-<li>आय प्रमाण पत्र <a class="wa-link" href="https://wa.me/917497945260">Apply</a></li>
-<li>जाति प्रमाण पत्र <a class="wa-link" href="https://wa.me/917497945260">Apply</a></li>
-<li>निवास प्रमाण पत्र <a class="wa-link" href="https://wa.me/917497945260">Apply</a></li>
-<li>जन्म प्रमाण पत्र <a class="wa-link" href="https://wa.me/917497945260">Apply</a></li>
-<li>मृत्यु प्रमाण पत्र <a class="wa-link" href="https://wa.me/917497945260">Apply</a></li>
-<li>चरित्र प्रमाण पत्र <a class="wa-link" href="https://wa.me/917497945260">Apply</a></li>
-</ul>
-</div>
-</div>
-
-<!-- GOVERNMENT -->
-<div class="acc-item">
-<div class="acc-header">🏛 सरकारी योजनाएं / सेवाएं</div>
-<div class="acc-body">
-<ul>
-<li>आयुष्मान भारत गोल्डन कार्ड <a class="wa-link" href="https://wa.me/917497945260">Apply</a></li>
-<li>प्रधानमंत्री आवास योजना <a class="wa-link" href="https://wa.me/917497945260">Apply</a></li>
-<li>उज्ज्वला योजना (गैस कनेक्शन) <a class="wa-link" href="https://wa.me/917497945260">Apply</a></li>
-<li>शौचालय योजना <a class="wa-link" href="https://wa.me/917497945260">Apply</a></li>
-<li>ई-श्रम कार्ड <a class="wa-link" href="https://wa.me/917497945260">Apply</a></li>
-<li>लेबर कार्ड / श्रमिक पंजीकरण <a class="wa-link" href="https://wa.me/917497945260">Apply</a></li>
-</ul>
-</div>
-</div>
-
-<!-- ID & DOCUMENT -->
-<div class="acc-item">
-<div class="acc-header">🪪 पहचान पत्र / डॉक्यूमेंट सेवाएं</div>
-<div class="acc-body">
-<ul>
-<li>PAN कार्ड (नया / सुधार) <a class="wa-link" href="https://wa.me/917497945260">Apply</a></li>
-<li>Aadhaar अपडेट (नाम, DOB, मोबाइल) <a class="wa-link" href="https://wa.me/917497945260">Apply</a></li>
-<li>वोटर ID (नया / संशोधन) <a class="wa-link" href="https://wa.me/917497945260">Apply</a></li>
-<li>राशन कार्ड (नया / संशोधन) <a class="wa-link" href="https://wa.me/917497945260">Apply</a></li>
-<li>Driving Licence (Apply / Renewal) <a class="wa-link" href="https://wa.me/917497945260">Apply</a></li>
-</ul>
-</div>
-</div>
-
-<!-- PENSION -->
-<div class="acc-item">
-<div class="acc-header">👴 पेंशन सेवाएं</div>
-<div class="acc-body">
-<ul>
-<li>वृद्धा पेंशन <a class="wa-link" href="https://wa.me/917497945260">Apply</a></li>
-<li>विधवा पेंशन <a class="wa-link" href="https://wa.me/917497945260">Apply</a></li>
-<li>दिव्यांग पेंशन <a class="wa-link" href="https://wa.me/917497945260">Apply</a></li>
-</ul>
-</div>
-</div>
-
-<!-- JOB / BANK -->
-<div class="acc-item">
-<div class="acc-header">💼 नौकरी / बैंक / अन्य सेवाएं</div>
-<div class="acc-body">
-<ul>
-<li>सरकारी नौकरी ऑनलाइन फॉर्म <a class="wa-link" href="https://wa.me/917497945260">Apply</a></li>
-<li>Police / SSC / Railway फॉर्म <a class="wa-link" href="https://wa.me/917497945260">Apply</a></li>
-<li>Bank Account Open Assistance <a class="wa-link" href="https://wa.me/917497945260">Apply</a></li>
-<li>Insurance Form Filling <a class="wa-link" href="https://wa.me/917497945260">Apply</a></li>
-</ul>
-</div>
-</div>
-
-<!-- DIGITAL -->
-<div class="acc-item">
-<div class="acc-header">🖥 साइबर कैफे / डिजिटल सेवाएं</div>
-<div class="acc-body">
-<ul>
-<li>Online Form Filling (All Types) <a class="wa-link" href="https://wa.me/917497945260">Apply</a></li>
-<li>Resume / CV Making <a class="wa-link" href="https://wa.me/917497945260">Apply</a></li>
-<li>Online Payment / Bill Pay <a class="wa-link" href="https://wa.me/917497945260">Apply</a></li>
-<li>Document Scan / Print <a class="wa-link" href="https://wa.me/917497945260">Apply</a></li>
-<li>Passport Photo / PDF Correction <a class="wa-link" href="https://wa.me/917497945260">Apply</a></li>
-</ul>
-</div>
-</div>
-
-</section>
-
-<section id="services">
-<h2>लोकप्रिय सेवाएँ</h2>
-
-<div class="acc-item">
-<div class="acc-header">🎓 Student / Scholarship</div>
-<div class="acc-body">
-<ul>
-<li>छात्रवृत्ति आवेदन <a class="wa-link" href="https://wa.me/917497945260">Apply</a></li>
-<li>फीस प्रतिपूर्ति <a class="wa-link" href="https://wa.me/917497945260">Apply</a></li>
-</ul>
-</div>
-</div>
-
-<div class="acc-item">
-<div class="acc-header">👴 Pension</div>
-<div class="acc-body">
-<ul>
-<li>वृद्धा पेंशन <a class="wa-link" href="https://wa.me/917497945260">Apply</a></li>
-<li>विधवा पेंशन <a class="wa-link" href="https://wa.me/917497945260">Apply</a></li>
-</ul>
-</div>
-</div>
-
-</section>
-
-<section id="status">
-<h2>📝 Form Status Check</h2>
-<div class="status-box">
-<input type="text" id="appId" placeholder="Application ID / Mobile Number"><br><br>
-<button onclick="checkStatus()">Check Status</button>
-<p id="result"></p>
-</div>
+<h1>Uttar Pradesh Digital Seva Portal</h1>
+<p>Cyber Cafe ke sabhi kaam ek jagah</p>
+<a href="https://wa.me/917497945260">WhatsApp par sampark kare</a>
 </section>
 
 <section>
-<h2>📚 Help & Knowledge</h2>
-<div class="knowledge">
-<h3>PAN Card ke liye kya documents chahiye?</h3>
-<p>Aadhaar, photo aur mobile number.</p>
+<h2 style="text-align:center;margin-bottom:25px">हमारी सेवाएं</h2>
 
-<h3>Scholarship reject kyun hoti hai?</h3>
-<p>Galat document ya last date miss hone par.</p>
+<div class="cards">
+<div class="card" onclick="openModal('student')">
+<i class="fa-solid fa-graduation-cap"></i>
+<h3>शिक्षा / छात्र</h3>
+</div>
+
+<div class="card" onclick="openModal('cert')">
+<i class="fa-solid fa-file-lines"></i>
+<h3>प्रमाण पत्र</h3>
+</div>
+
+<div class="card" onclick="openModal('gov')">
+<i class="fa-solid fa-building-columns"></i>
+<h3>सरकारी योजनाएं</h3>
+</div>
+
+<div class="card" onclick="openModal('id')">
+<i class="fa-solid fa-id-card"></i>
+<h3>ID / डॉक्यूमेंट</h3>
+</div>
+
+<div class="card" onclick="openModal('job')">
+<i class="fa-solid fa-briefcase"></i>
+<h3>नौकरी / बैंक</h3>
+</div>
+
+<div class="card" onclick="openModal('digital')">
+<i class="fa-solid fa-desktop"></i>
+<h3>डिजिटल / साइबर</h3>
+</div>
 </div>
 </section>
 
+<!-- MODAL -->
+<div class="modal" id="modal">
+<div class="modal-content">
+<div class="close" onclick="closeModal()">❌ Close</div>
+<h2 id="modalTitle"></h2>
+<ul id="modalList"></ul>
+</div>
+</div>
+
 <footer>
-© 2026 Nishchint | Trusted Digital Service
+📞 7497945260 | © 2026 Nishchint
 </footer>
 
 <a class="whatsapp" href="https://wa.me/917497945260">
@@ -252,50 +176,69 @@ footer{background:#0a3d62;color:#fff;padding:30px;text-align:center}
 </a>
 
 <script>
-/* ACCORDION */
-document.querySelectorAll(".acc-header").forEach(h=>{
-h.onclick=()=>{
-const i=h.parentElement,b=h.nextElementSibling;
-document.querySelectorAll(".acc-item").forEach(x=>{
-if(x!==i){x.classList.remove("open");x.querySelector(".acc-body").style.maxHeight=null;}
+const services={
+student:[
+"छात्रवृत्ति (Pre/Post Matric)",
+"फीस प्रतिपूर्ति",
+"कॉलेज / यूनिवर्सिटी फॉर्म",
+"ITI / Polytechnic फॉर्म",
+"Online Exam Form"
+],
+cert:[
+"आय प्रमाण पत्र",
+"जाति प्रमाण पत्र",
+"निवास प्रमाण पत्र",
+"जन्म / मृत्यु प्रमाण पत्र",
+"चरित्र प्रमाण पत्र"
+],
+gov:[
+"आयुष्मान भारत कार्ड",
+"प्रधानमंत्री आवास योजना",
+"उज्ज्वला योजना",
+"ई-श्रम कार्ड",
+"शौचालय योजना"
+],
+id:[
+"PAN कार्ड",
+"Aadhaar Update",
+"वोटर ID",
+"राशन कार्ड",
+"Driving Licence"
+],
+job:[
+"SSC / Railway Form",
+"UP Police Form",
+"Govt Job Online Apply",
+"Bank Account Assistance"
+],
+digital:[
+"Resume / CV Making",
+"Online Form Filling",
+"Print / Scan",
+"Bill Payment",
+"PDF Correction"
+]
+};
+
+function openModal(type){
+document.getElementById("modal").style.display="flex";
+document.getElementById("modalTitle").innerText=type.toUpperCase()+" SERVICES";
+const ul=document.getElementById("modalList");
+ul.innerHTML="";
+services[type].forEach(s=>{
+ul.innerHTML+=`<li>${s} <a class="apply" href="https://wa.me/917497945260">Apply</a></li>`;
 });
-if(i.classList.contains("open")){
-i.classList.remove("open");b.style.maxHeight=null;
-}else{
-i.classList.add("open");b.style.maxHeight=b.scrollHeight+"px";
 }
-}
-});
-<script>
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("/nishchint/service-worker.js");
+function closeModal(){
+document.getElementById("modal").style.display="none";
 }
 </script>
 
-/* STATUS */
-function checkStatus(){
-const r=document.getElementById("result");
-r.innerText="⏳ Processing...";
-setTimeout(()=>{r.innerText="✅ आपका फॉर्म प्रक्रिया में है";},1200);
+<script>
+if("serviceWorker" in navigator){
+navigator.serviceWorker.register("/nishchint/service-worker.js");
 }
-
-/* LIVE UPDATES DATA */
-const data={
-sch:["Post Matric – 31 March 2026","Pre Matric – 15 April 2026"],
-vac:["SSC GD – 10 Feb 2026","UP Police – 28 Feb 2026"],
-schm:["Skill Training Yojana","Ayushman Update"]
-};
-function fill(id,arr){
-const u=document.getElementById(id);u.innerHTML="";
-arr.forEach(x=>{const l=document.createElement("li");l.textContent=x;u.appendChild(l);});
-}
-fill("scholarshipList",data.sch);
-fill("vacancyList",data.vac);
-fill("schemeList",data.schm);
-document.getElementById("lastUpdated").innerText=new Date().toDateString();
 </script>
 
 </body>
 </html>
-
-
