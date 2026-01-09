@@ -186,6 +186,11 @@ i.classList.add("open");b.style.maxHeight=b.scrollHeight+"px";
 }
 }
 });
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/nishchint/service-worker.js");
+}
+</script>
 
 /* STATUS */
 function checkStatus(){
@@ -212,3 +217,4 @@ document.getElementById("lastUpdated").innerText=new Date().toDateString();
 
 </body>
 </html>
+
