@@ -2,157 +2,146 @@
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Nishchint – Cyber Cafe & Digital Seva Near Me</title>
-
-<meta name="description" content="Nishchint Digital Seva – Uttar Pradesh ka trusted cyber cafe aur online form filling portal. PAN, Aadhaar, Scholarship, Sarkari Yojana aur sabhi services ek jagah.">
-<meta name="robots" content="index, follow">
+<title>Nishchint – Cyber Cafe & Digital Seva</title>
+<meta name="description" content="Uttar Pradesh ka trusted cyber cafe aur online form filling service. Scholarship, PAN, Aadhaar, Yojana, Jobs – sab ek jagah.">
 
 <link rel="manifest" href="/nishchint/manifest.json">
-<meta name="theme-color" content="#020617">
+<meta name="theme-color" content="#0a3d62">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Hind:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Hind&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Hind',sans-serif;background:#020617;color:#e5e7eb}
+body{
+font-family:'Hind',sans-serif;
+background:#0b1220;
+color:#e5f0ff;
+}
 
 /* HEADER */
 header{
-  background:#020617;
-  border-bottom:2px solid #38bdf8;
-  padding:14px 22px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+background:#020b18;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:12px 20px;
+border-bottom:1px solid #1e90ff;
 }
 .logo{
-  display:flex;
-  align-items:center;
-  gap:10px;
+display:flex;
+align-items:center;
+gap:10px;
 }
 .logo img{
-  height:40px;
-  width:auto;
+height:40px;
+width:auto;
 }
 .logo span{
-  font-weight:700;
-  color:#fff;
+font-size:20px;
+font-family:'Poppins';
+color:#38bdf8;
 }
 header a{
-  color:#38bdf8;
-  font-weight:700;
-  text-decoration:none;
+color:#38bdf8;
+text-decoration:none;
+font-weight:600;
 }
 
 /* HERO */
 .hero{
-  background:linear-gradient(135deg,#1e90ff,#020617);
-  text-align:center;
-  padding:80px 20px;
+text-align:center;
+padding:70px 20px;
+background:linear-gradient(135deg,#020b18,#0a3d62);
 }
 .hero h1{
-  font-family:'Poppins';
-  color:#fff;
-  font-size:36px;
+font-size:36px;
+font-family:'Poppins';
 }
-.hero p{color:#c7d2fe;margin-top:8px}
+.hero p{
+margin:10px 0;
+color:#9ddcff;
+}
 .hero a{
-  display:inline-block;
-  margin-top:25px;
-  padding:14px 40px;
-  border-radius:40px;
-  background:#22d3ee;
-  color:#020617;
-  font-weight:800;
-  box-shadow:0 0 25px #22d3ee;
+display:inline-block;
+margin-top:20px;
+padding:14px 35px;
+border-radius:30px;
+background:#25d366;
+color:#fff;
+text-decoration:none;
+font-weight:700;
+box-shadow:0 0 20px #25d366;
+animation:pulse 1.5s infinite;
+}
+@keyframes pulse{
+50%{transform:scale(1.05)}
 }
 
-/* SEARCH */
-.search{text-align:center;margin:30px}
-.search input{
-  padding:14px 20px;
-  border-radius:30px;
-  width:80%;
-  max-width:420px;
-  border:2px solid #38bdf8;
-  background:#020617;
-  color:#fff;
+/* NEWS */
+.news{
+padding:50px 20px;
+text-align:center;
+}
+.news h2{margin-bottom:20px}
+.news-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+.news-card{
+background:#0a1f3a;
+padding:20px;
+border-radius:16px;
+box-shadow:0 0 15px rgba(56,189,248,.3);
+}
+.news-card a{
+color:#38bdf8;
+text-decoration:none;
 }
 
-/* SECTIONS */
-section{max-width:1200px;margin:60px auto;padding:0 20px}
-h2{text-align:center;margin-bottom:30px;color:#38bdf8}
-
-/* CARDS */
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:22px;
+/* SERVICES */
+.services{
+padding:60px 20px;
+text-align:center;
 }
-.card{
-  background:#020617;
-  border:2px solid #38bdf8;
-  border-radius:18px;
-  padding:22px;
-  text-align:center;
-  box-shadow:0 0 25px rgba(56,189,248,.4);
-  transition:.3s;
+.service-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
 }
-.card:hover{
-  transform:translateY(-10px);
-  box-shadow:0 0 50px #38bdf8;
+.service{
+background:#0a1f3a;
+padding:25px;
+border-radius:16px;
+transition:.3s;
 }
-.card i{
-  font-size:42px;
-  color:#38bdf8;
-  margin-bottom:10px;
-}
-.card h3{color:#fff}
-
-/* MODAL */
-.modal{
-  position:fixed;
-  top:0;left:0;
-  width:100%;height:100%;
-  background:rgba(0,0,0,.7);
-  display:none;
-  align-items:center;
-  justify-content:center;
-}
-.modal-content{
-  background:#020617;
-  color:#fff;
-  border:2px solid #38bdf8;
-  border-radius:20px;
-  padding:25px;
-  width:90%;
-  max-width:500px;
-}
-.modal-content ul{padding-left:18px}
-.modal-content li{margin:10px 0}
-
-/* FOOTER */
-footer{
-  background:#020617;
-  border-top:2px solid #38bdf8;
-  text-align:center;
-  padding:30px;
-  color:#94a3b8;
+.service:hover{
+transform:translateY(-8px);
+box-shadow:0 0 20px #38bdf8;
 }
 
 /* WHATSAPP */
 .whatsapp{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25d366;
-  color:#fff;
-  padding:16px;
-  border-radius:50%;
-  font-size:26px;
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25d366;
+color:#fff;
+padding:16px;
+border-radius:50%;
+font-size:26px;
+box-shadow:0 0 20px #25d366;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:30px;
+background:#020b18;
+margin-top:50px;
 }
 </style>
 </head>
@@ -160,49 +149,40 @@ footer{
 <body>
 
 <header>
-  <div class="logo">
-    <img src="/nishchint/logo.png">
-    <span>Nishchint Digital Seva</span>
-  </div>
-  <a href="https://wa.me/917497945260">WhatsApp</a>
+<div class="logo">
+<img src="/nishchint/logo.png">
+<span>Nishchint</span>
+</div>
+<a href="https://wa.me/917497945260">WhatsApp</a>
 </header>
 
 <section class="hero">
-  <h1>Cyber Cafe & Digital Seva Near You</h1>
-  <p>Uttar Pradesh ka trusted online portal</p>
-  <a href="https://wa.me/917497945260">Apply via WhatsApp</a>
+<h1>Cyber Cafe & Digital Seva Near You</h1>
+<p>Uttar Pradesh ke liye trusted digital portal</p>
+<a href="https://wa.me/917497945260">Apply via WhatsApp</a>
 </section>
 
-<div class="search">
-  <input type="text" placeholder="Search PAN, Aadhaar, Scholarship, Job…">
-</div>
-
-<section>
+<section class="news">
 <h2>📰 Latest Sarkari Updates</h2>
-<div id="news" class="cards"></div>
+<div id="news" class="news-grid"></div>
 </section>
 
-<section>
+<section class="services">
 <h2>हमारी सेवाएं</h2>
-<div class="cards">
-<div class="card" onclick="openModal('student')"><i class="fa-solid fa-graduation-cap"></i><h3>शिक्षा</h3></div>
-<div class="card" onclick="openModal('cert')"><i class="fa-solid fa-file-lines"></i><h3>प्रमाण पत्र</h3></div>
-<div class="card" onclick="openModal('gov')"><i class="fa-solid fa-building-columns"></i><h3>योजनाएं</h3></div>
-<div class="card" onclick="openModal('id')"><i class="fa-solid fa-id-card"></i><h3>ID</h3></div>
-<div class="card" onclick="openModal('job')"><i class="fa-solid fa-briefcase"></i><h3>Jobs</h3></div>
-<div class="card" onclick="openModal('digital')"><i class="fa-solid fa-desktop"></i><h3>Digital</h3></div>
+<div class="service-grid">
+<div class="service">Scholarship</div>
+<div class="service">PAN / Aadhaar</div>
+<div class="service">Ration Card</div>
+<div class="service">Pension</div>
+<div class="service">Ayushman Card</div>
+<div class="service">E-Shram</div>
+<div class="service">Govt Jobs</div>
+<div class="service">Certificates</div>
 </div>
 </section>
-
-<div class="modal" id="modal">
-<div class="modal-content">
-<div style="text-align:right;cursor:pointer" onclick="closeModal()">❌</div>
-<ul id="modalList"></ul>
-</div>
-</div>
 
 <footer>
-© 2026 Nishchint Digital Seva | Uttar Pradesh
+© 2026 Nishchint Digital Seva | +91 7497945260
 </footer>
 
 <a class="whatsapp" href="https://wa.me/917497945260">
@@ -210,32 +190,18 @@ footer{
 </a>
 
 <script>
-const services={
-student:["Scholarship","Fee Reimbursement","Exam Forms"],
-cert:["Income","Caste","Domicile","Birth"],
-gov:["Ayushman","PM Awas","E-Shram"],
-id:["PAN","Aadhaar","Voter","Ration"],
-job:["SSC","Railway","UP Police"],
-digital:["Resume","Form Filling","Print","Bill Payment"]
-};
-
-function openModal(t){
-let ul=document.getElementById("modalList");
-ul.innerHTML="";
-services[t].forEach(s=>ul.innerHTML+=`<li>${s}</li>`);
-document.getElementById("modal").style.display="flex";
-}
-function closeModal(){
-document.getElementById("modal").style.display="none";
-}
-
-/* AUTO NEWS */
-fetch(https://sheetdb.io/api/v1/pg210re7vg42k)
+// PASTE YOUR SHEETDB API LINK HERE
+fetch https://sheetdb.io/api/v1/pg210re7vg42k
 .then(r=>r.json())
-.then(d=>{
+.then(data=>{
 let html="";
-d.slice(0,6).forEach(n=>{
-html+=`<div class="card"><h4>${n.Title}</h4><small>${n.Date}</small><br><a href="${n.Link}" target="_blank" style="color:#38bdf8">View</a></div>`;
+data.slice(0,6).forEach(n=>{
+html+=`
+<div class="news-card">
+<b>${n.Title}</b><br>
+<small>${n.Date}</small><br>
+<a href="${n.Link}" target="_blank">Open</a>
+</div>`;
 });
 document.getElementById("news").innerHTML=html;
 });
