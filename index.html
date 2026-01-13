@@ -3,23 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nishchint – Digital Seva Portal</title>
 
-<meta name="description" content="Nishchint – Uttar Pradesh ki trusted cyber cafe & online form filling service. Sabhi sarkari aur digital kaam ek jagah.">
+<title>Nishchint – Cyber Cafe & Digital Seva Near Me</title>
+
+<meta name="description" content="Nishchint Digital Seva – Uttar Pradesh ka trusted cyber cafe aur online form filling center. PAN, Aadhaar, Scholarship, Certificate aur sabhi sarkari seva near me.">
 <meta name="robots" content="index, follow">
 
-<!-- GOOGLE NEAR ME SEO -->
+<!-- NEAR ME SEO -->
 <meta name="geo.region" content="IN-UP">
 <meta name="geo.placename" content="Uttar Pradesh">
 <meta name="keywords" content="cyber cafe near me, pan card near me, aadhaar update near me, scholarship form near me, nishchint digital seva">
 
 <link rel="manifest" href="/nishchint/manifest.json">
-<meta name="theme-color" content="#0a3d62">
+<meta name="theme-color" content="#020617">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Hind:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<!-- LOCAL BUSINESS -->
 <script type="application/ld+json">
 {
  "@context":"https://schema.org",
@@ -34,40 +34,147 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Hind',sans-serif;background:#f4f7fb;color:#1f2937}
+body{font-family:'Hind',sans-serif;background:#020617;color:#e5e7eb}
 
 /* HEADER */
-header{background:#0a3d62;color:#fff;padding:14px 22px;display:flex;justify-content:space-between;align-items:center}
+header{
+  background:#020617;
+  padding:16px 22px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid #38bdf8;
+}
 header img{height:36px}
-header a{color:#fff;font-weight:600}
+header strong{color:#fff;font-size:18px}
+header a{color:#38bdf8;font-weight:700}
 
 /* HERO */
-.hero{background:linear-gradient(135deg,#1e90ff,#38ada9);color:#fff;text-align:center;padding:60px 20px}
-.hero h1{font-family:'Poppins';font-size:32px}
-.hero a{background:#25d366;color:#fff;padding:14px 30px;border-radius:30px;display:inline-block;margin-top:15px;font-weight:600}
+.hero{
+  background:radial-gradient(circle at top,#1e90ff,#020617);
+  padding:90px 20px;
+  text-align:center;
+}
+.hero h1{
+  font-family:'Poppins';
+  font-size:40px;
+  color:#fff;
+  text-shadow:0 0 25px rgba(56,189,248,.8);
+}
+.hero p{color:#c7d2fe;margin-top:8px}
+.hero a{
+  margin-top:25px;
+  display:inline-block;
+  padding:16px 40px;
+  border-radius:40px;
+  background:linear-gradient(90deg,#22d3ee,#38bdf8);
+  color:#020617;
+  font-weight:800;
+  box-shadow:0 0 35px rgba(56,189,248,.9);
+  animation:pulse 2s infinite;
+}
 
 /* SEARCH */
-.search{margin:30px auto;text-align:center}
-.search input{padding:14px;width:80%;max-width:400px;border-radius:30px;border:2px solid #ddd}
+.search{text-align:center;margin:30px}
+.search input{
+  background:#020617;
+  color:#e5e7eb;
+  border:2px solid #38bdf8;
+  padding:14px 20px;
+  border-radius:30px;
+  width:80%;
+  max-width:420px;
+}
 
 /* SECTIONS */
-section{max-width:1200px;margin:50px auto;padding:0 20px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
-.card{background:#fff;padding:30px 20px;border-radius:20px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.12);transition:.3s}
-.card:hover{transform:translateY(-8px)}
-.card i{font-size:46px;color:#1e90ff;margin-bottom:10px}
+section{max-width:1200px;margin:70px auto;padding:0 20px}
+h2{text-align:center;margin-bottom:30px;color:#38bdf8}
+
+/* CARDS */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:28px;
+}
+.card{
+  background:linear-gradient(145deg,#020617,#0b1220);
+  border:1px solid rgba(56,189,248,.3);
+  padding:30px 20px;
+  border-radius:22px;
+  text-align:center;
+  box-shadow:0 0 30px rgba(56,189,248,.2);
+  transition:.4s ease;
+  animation:fadeUp .6s ease both;
+}
+.card:hover{
+  transform:translateY(-14px) scale(1.03);
+  box-shadow:0 0 60px rgba(56,189,248,.8);
+}
+.card i{
+  font-size:48px;
+  color:#38bdf8;
+  margin-bottom:12px;
+}
+.card h3{color:#fff}
+
+/* NEWS */
+#news .card{
+  border-left:4px solid #22d3ee;
+}
 
 /* MODAL */
-.modal{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;z-index:999}
-.modal-content{background:#fff;width:90%;max-width:520px;border-radius:20px;padding:25px;max-height:80vh;overflow:auto}
-.close{text-align:right;font-weight:700;cursor:pointer}
-.apply{background:#25d366;color:#fff;padding:4px 10px;border-radius:20px;font-size:13px}
+.modal{
+  position:fixed;top:0;left:0;
+  width:100%;height:100%;
+  background:rgba(0,0,0,.7);
+  display:none;align-items:center;justify-content:center;
+}
+.modal-content{
+  background:#020617;
+  color:#e5e7eb;
+  padding:25px;
+  border-radius:25px;
+  border:1px solid #38bdf8;
+  width:90%;max-width:520px;
+}
+.apply{
+  background:linear-gradient(90deg,#22d3ee,#38bdf8);
+  color:#020617;
+  padding:4px 12px;
+  border-radius:20px;
+}
 
 /* FOOTER */
-footer{background:#0a3d62;color:#fff;text-align:center;padding:25px;margin-top:50px}
+footer{
+  background:#020617;
+  text-align:center;
+  padding:35px;
+  color:#94a3b8;
+  border-top:1px solid #38bdf8;
+}
 
 /* WHATSAPP */
-.whatsapp{position:fixed;bottom:20px;right:20px;background:#25d366;color:#fff;padding:16px;border-radius:50%;font-size:26px}
+.whatsapp{
+  position:fixed;
+  bottom:22px;
+  right:22px;
+  background:#25d366;
+  color:#fff;
+  padding:18px;
+  border-radius:50%;
+  font-size:26px;
+  box-shadow:0 0 30px rgba(37,211,102,.9);
+}
+
+/* ANIMATIONS */
+@keyframes pulse{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.06)}
+}
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(25px)}
+  to{opacity:1;transform:translateY(0)}
+}
 </style>
 </head>
 
@@ -76,23 +183,23 @@ footer{background:#0a3d62;color:#fff;text-align:center;padding:25px;margin-top:5
 <header>
 <div style="display:flex;align-items:center;gap:10px">
 <img src="/nishchint/logo.png">
-<strong>Nishchint</strong>
+<strong>Nishchint Digital Seva</strong>
 </div>
 <a href="https://wa.me/917497945260">WhatsApp</a>
 </header>
 
 <section class="hero">
-<h1>Uttar Pradesh Digital Seva Portal</h1>
-<p>Cyber Cafe ke sabhi kaam ek jagah</p>
-<a href="https://wa.me/917497945260">WhatsApp par sampark kare</a>
+<h1>Cyber Cafe & Digital Seva Near You</h1>
+<p>Uttar Pradesh ke liye trusted digital portal</p>
+<a href="https://wa.me/917497945260">Apply via WhatsApp</a>
 </section>
 
 <div class="search">
-<input id="searchBox" type="text" placeholder="🔍 Search scholarship, pan, aadhaar, job…">
+<input id="searchBox" type="text" placeholder="🔍 Search PAN, Aadhaar, Scholarship, Job…">
 </div>
 
-<section>
-<h2 style="text-align:center">📰 Latest Sarkari Updates</h2>
+<section id="news">
+<h2>📰 Latest Sarkari Updates</h2>
 <div class="cards">
 <div class="card">Post Matric Scholarship – Last date 31 March</div>
 <div class="card">UP Police Bharti – 60,000 posts</div>
@@ -102,7 +209,7 @@ footer{background:#0a3d62;color:#fff;text-align:center;padding:25px;margin-top:5
 </section>
 
 <section>
-<h2 style="text-align:center">हमारी सेवाएं</h2>
+<h2>हमारी सेवाएं</h2>
 <div class="cards">
 <div class="card" onclick="openModal('student')"><i class="fa-solid fa-graduation-cap"></i><h3>शिक्षा</h3></div>
 <div class="card" onclick="openModal('cert')"><i class="fa-solid fa-file-lines"></i><h3>प्रमाण पत्र</h3></div>
@@ -115,7 +222,7 @@ footer{background:#0a3d62;color:#fff;text-align:center;padding:25px;margin-top:5
 
 <div class="modal" id="modal">
 <div class="modal-content">
-<div class="close" onclick="closeModal()">❌ Close</div>
+<div style="text-align:right;cursor:pointer" onclick="closeModal()">❌</div>
 <ul id="modalList"></ul>
 </div>
 </div>
