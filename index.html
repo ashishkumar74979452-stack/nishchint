@@ -190,22 +190,28 @@ margin-top:50px;
 </a>
 
 <script>
-// PASTE YOUR SHEETDB API LINK HERE
-fetch https://sheetdb.io/api/v1/pg210re7vg42k
-.then(r=>r.json())
-.then(data=>{
-let html="";
-data.slice(0,6).forEach(n=>{
-html+=`
-<div class="news-card">
-<b>${n.Title}</b><br>
-<small>${n.Date}</small><br>
-<a href="${n.Link}" target="_blank">Open</a>
-</div>`;
-});
-document.getElementById("news").innerHTML=html;
+fetch https://docs.google.com/spreadsheets/d/e/2PACX-1vRbsBsdCeWTODUjeu2tMTdjIh_FbgXgUErfZ7yn7iqQVv1qsGJ8kq4ct9v33WXxeV1XqmFYWLu-eWbZ/pub?output=csv
+.then(r => r.text())
+.then(csv => {
+  let lines = csv.split("\n").slice(1);
+  let html="";
+  lines.slice(0,6).forEach(l=>{
+    let [title,link,date] = l.split(",");
+    if(title){
+      html += `
+        <div class="news-card">
+          <b>${title}</b><br>
+          <small>${date}</small><br>
+          <a href="${link}" target="_blank">Open</a>
+        </div>
+      `;
+    }
+  });
+  document.getElementById("news").innerHTML = html;
 });
 </script>
 
+
 </body>
 </html>
+
